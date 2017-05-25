@@ -1,5 +1,4 @@
 # Psi ES6 Syntax Intro Lecture Guide
--
 ## Objectives
 - See some of the ES6 syntax
 
@@ -51,5 +50,6 @@ const express = require('express');
 ```
 
 ## Resources
-- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [Other ES6 Syntax](http://es6-features.org/)
+- [MDN on let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [mpj video](https://www.youtube.com/watch?v=sjyJBL5fkp8)
