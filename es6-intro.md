@@ -1,4 +1,4 @@
-# Psi ES6 Syntax IntroLecture Guide
+# Psi ES6 Syntax Intro Lecture Guide
 -
 ## Objectives
 - See some of the ES6 syntax
