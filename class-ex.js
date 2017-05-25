@@ -1,5 +1,3 @@
-/*jshint esversion: 6*/
-
 // class keyword gives class a name
 class Dog {
 
