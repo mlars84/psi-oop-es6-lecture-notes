@@ -1,5 +1,4 @@
 # Psi OOP/ES6 Lecture Guide
--
 ## Objectives
 - Hear about some of the OOP terms and concepts
 - See some of the ES6 syntax
