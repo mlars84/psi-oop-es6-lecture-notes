@@ -6,25 +6,36 @@ class Animal {
     this.size = size;
   }
   //methods / behaviors
+  poops(){
+    console.log(this.name, 'poopy');
+  }
 } //end super-Animal
 
 //sub-class of Cat ('extends' connects it to Animal super class)
 class Cat extends Animal{
   //delegates to parent or super class constructor
-  super(name, color, size){
+  constructor(name, color, size, claws, lives){
+    super(name, color, size);
+    this.lives = 9;
+    this.claws = 10;
   }
   meow(){
     console.log(this.name, 'says meow!');
   }
 } //end Cat
-const ourCat = new Cat('Gus', 'white/brown', 'small');
-console.log(ourCat, ourCat.meow());
+const gus = new Cat('Gus', 'white/brown', 'small');
+const hugo = new Cat('Hugo', 'grey/white', 'medium');
+console.log(gus, gus.meow());
+console.log(hugo, hugo.meow());
 
 // sub-class of Dog (class keyword gives class a name)
 class Dog extends Animal {
   //constructor default function for every class
   //constructor assigns the properties their values
-  super(name, color, size){
+  constructor(name, color, size, claws, goodBreath){
+    super(name, color, size);
+    this.claws = 10;
+    this.goodBreath = goodBreath;
   }
   //any behaviors come after the constructor
   bark(){
@@ -34,7 +45,35 @@ class Dog extends Animal {
 
 //new keyword allow us to create an inheritance of our classes
 //instance means an object
-const ourDog = new Dog('Daisy', 'large', 'white');
-const otherDog = new Dog('fritz', 'medium', 'white/brown');
-console.log('ourDog =>', ourDog, otherDog);
-console.log('ourDog barking =', ourDog.bark(), otherDog.bark());
+const daisy = new Dog('Daisy', 'large', 'white', 10, false);
+const fritz = new Dog('fritz', 'medium', 'white/brown', 10, true);
+console.log('Dogs =>', daisy, fritz);
+console.log('Dog barking =', daisy.bark(), fritz.bark());
+
+console.log(daisy.poops(), fritz.poops(), gus.poops());
+
+
+
+//composition example
+class Company {
+  constructor(name, salary){
+    this.name = name;
+    this.empList = [];
+  }
+}
+
+class Employee {
+  constructor(name, salary){
+    this.name = name;
+    this.salary = salary;
+  }
+}
+
+//methods
+// function addEmp(){
+//   this.empList.push(myEmp);
+// }
+
+const myComp = new Company ('MattCo');
+const myEmp = new Employee('Chuck', 56000);
+// addEmp(myEmp);
